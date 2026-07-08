@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Stackly</title>
+  <meta name="description" content="Login to your Stackly account.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <div class="split-screen">
+    <!-- Left side: Visuals -->
+    <div class="split-left">
+      <div class="split-left-content">
+        <h1>Welcome Back to Stackly!</h1>
+        <p>Unlock a world of magical toys, exclusive member discounts, and personalized recommendations.</p>
+      </div>
+    </div>
+    
+    <!-- Right side: Form -->
+    <div class="split-right">
+      <a href="index.html" class="back-home">&larr; Back to Home</a>
+      <div class="login-box">
+        <div class="logo" style="justify-content: center; margin-bottom: 30px;"><img src="assets/stackly_logo.webp" alt="Stackly" style="height: 35px; vertical-align: middle;"></div>
+        <h2 style="text-align: center; margin-bottom: 25px;">Sign in to your account</h2>
+        
+        <!-- Premium Role Selection Toggle -->
+        <div class="role-toggle-container" id="role-toggle-container">
+          <div class="role-toggle-bg"></div>
+          <div class="role-option active" id="role-customer">Customer</div>
+          <div class="role-option" id="role-admin">Admin</div>
+        </div>
+
+        <form action="customer_dashboard.html" method="GET" id="auth-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" minlength="8" required>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+              <input type="checkbox" style="width: auto;"> Remember me
+            </label>
+            <a href="404.html" style="color: var(--primary); font-weight: 600;">Forgot password?</a>
+          </div>
+          <div class="form-btn">
+            <button type="submit" class="btn" style="width: 100%;">Log In</button>
+          </div>
+          <div style="text-align: center; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+            <p style="color: var(--text-light);">Don't have an account? <a href="signup.html" style="color: var(--secondary); font-weight: 700; margin-left: 5px;">Register Now</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({duration: 800, once: true, offset: 50});</script>
+</body>
+</html>
+

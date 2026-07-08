@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - Stackly</title>
+  <meta name="description" content="Stackly Customer Dashboard">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dash-sidebar">
+      <div class="dashboard-logo">
+        <a href="index.html" class="logo"><img src="assets/stackly_logo.webp" alt="Stackly" style="height: 35px; vertical-align: middle;"></a>
+      </div>
+      <nav class="dashboard-nav">
+        <a href="javascript:void(0)" data-target="profile" class="active">&#128100; My Account</a>
+        <a href="javascript:void(0)" data-target="orders">&#128230; Order History</a>
+        <a href="javascript:void(0)" data-target="saved">&#10084; Wishlist</a>
+        <a href="javascript:void(0)" data-target="addresses">&#128205; Saved Addresses</a>
+        <a href="javascript:void(0)" data-target="payments">&#128179; Payment Methods</a>
+        <a href="javascript:void(0)" data-target="settings">&#9881; Account Settings</a>
+        <a href="login.html" class="logout">&#128682; Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <div class="dash-header-left">
+          <div class="mobile-menu-btn" id="dash-menu-btn">&#9776;</div>
+          <div class="dash-search-container">
+            <input type="text" class="dash-search" placeholder="Search your orders...">
+          </div>
+        </div>
+        
+        <div class="dash-header-right">
+          <button class="dash-icon-btn">
+            <i class="fa-solid fa-bell"></i>
+            <span class="dash-badge-num">3</span>
+          </button>
+          
+          <button class="dash-icon-btn">
+            <i class="fa-regular fa-message"></i>
+          </button>
+          
+          <div class="dash-user-info">
+            <span id="display-email">divyasowndappan1902@gmail.com</span>
+            <span class="role-badge">CUSTOMER</span>
+            <img src="https://ui-avatars.com/api/?name=Divya&background=random" alt="Avatar" class="dash-avatar-img">
+          </div>
+        </div>
+      </header>
+
+      <!-- Profile Section -->
+      <div id="profile" class="dashboard-section active">
+        <!-- Welcome & Rewards Banner -->
+        <div class="welcome-banner">
+          <div>
+            <h2>Hello, John! &#127881;</h2>
+            <p>Welcome back to your magical toy kingdom.</p>
+            <a href="404.html" class="btn" style="margin-top: 20px; background: #fff; color: var(--primary);">Shop New Arrivals</a>
+          </div>
+          <div class="reward-points">
+            <span>1,250</span>
+            Stackly Reward Points
+          </div>
+        </div>
+
+        <!-- Active Orders -->
+        <div class="data-card">
+          <h3>Active Orders</h3>
+          <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#ORD-9021</td>
+                <td>Jul 07, 2026</td>
+                <td>Magic Toy Set, Plush Bear</td>
+                <td>$78.99</td>
+                <td><span class="status-badge status-pending">Shipped</span></td>
+                <td><button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.9rem;">Track Package</button></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+
+        <!-- Recommended For You (Reusing product-grid styles) -->
+        <div class="data-card">
+          <h3>Recommended For You</h3>
+          <div class="product-grid" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-img"><img src="assets/toy_car_1783418838575.png" alt="Speedster"></div>
+              <div class="product-info" style="padding: 15px;">
+                <h3 style="font-size: 1.1rem;">Speedster V2</h3>
+                <div class="price" style="font-size: 1.1rem;">$39.99</div>
+                <a href="404.html" class="btn btn-secondary">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-img"><img src="assets/plush_bear_1783418828034.png" alt="Cuddle Bunny"></div>
+              <div class="product-info" style="padding: 15px;">
+                <h3 style="font-size: 1.1rem;">Cuddle Bunny</h3>
+                <div class="price" style="font-size: 1.1rem;">$24.00</div>
+                <a href="404.html" class="btn btn-secondary">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-img"><img src="assets/hero_toys_1783418808753.png" alt="Block Builder" style="object-fit: cover;"></div>
+              <div class="product-info" style="padding: 15px;">
+                <h3 style="font-size: 1.1rem;">Block Builder</h3>
+                <div class="price" style="font-size: 1.1rem;">$55.00</div>
+                <a href="404.html" class="btn btn-secondary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="payments" class="dashboard-section">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <h3>Payment Methods</h3>
+          <button onclick="window.location.href='404.html'" class="btn">+ Add New Card</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+          <div class="data-card" style="margin-bottom: 0; background: linear-gradient(135deg, #1a1a1a, #333); color: white; border-radius: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+              <i class="fa-brands fa-cc-visa" style="font-size: 2.5rem;"></i>
+              <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">Default</span>
+            </div>
+            <div style="letter-spacing: 2px; font-size: 1.2rem; margin-bottom: 15px;">**** **** **** 4242</div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #ccc;">
+              <span>John Doe</span>
+              <span>Exp: 12/28</span>
+            </div>
+            <div style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; display: flex; justify-content: flex-end; gap: 15px;">
+              <a href="javascript:void(0)" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Edit</a>
+              <a href="javascript:void(0)" style="color: #ff6b6b; text-decoration: none; font-size: 0.9rem;">Remove</a>
+            </div>
+          </div>
+          
+          <div class="data-card" style="margin-bottom: 0; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border: 1px solid #ddd; border-radius: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+              <i class="fa-brands fa-cc-mastercard" style="font-size: 2.5rem; color: #eb001b;"></i>
+            </div>
+            <div style="letter-spacing: 2px; font-size: 1.2rem; margin-bottom: 15px; color: #333;">**** **** **** 8899</div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #666;">
+              <span>John Doe</span>
+              <span>Exp: 08/26</span>
+            </div>
+            <div style="margin-top: 15px; border-top: 1px solid #ddd; padding-top: 10px; display: flex; justify-content: flex-end; gap: 15px;">
+              <a href="javascript:void(0)" style="color: var(--primary); text-decoration: none; font-size: 0.9rem;">Set Default</a>
+              <a href="javascript:void(0)" style="color: #666; text-decoration: none; font-size: 0.9rem;">Edit</a>
+              <a href="javascript:void(0)" style="color: #ff6b6b; text-decoration: none; font-size: 0.9rem;">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Order History Section -->
+      <div id="orders" class="dashboard-section">
+        <div class="data-card">
+          <h3>Order History</h3>
+          <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#ORD-8012</td>
+                <td>Jun 12, 2026</td>
+                <td>Building Blocks Set</td>
+                <td>$45.00</td>
+                <td><span class="status-badge" style="background: #e8f5e9; color: #2e7d32;">Delivered</span></td>
+                <td><button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.9rem;">View Invoice</button></td>
+              </tr>
+              <tr>
+                <td>#ORD-7654</td>
+                <td>May 22, 2026</td>
+                <td>Action Figure (Superhero)</td>
+                <td>$29.99</td>
+                <td><span class="status-badge" style="background: #e8f5e9; color: #2e7d32;">Delivered</span></td>
+                <td><button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.9rem;">View Invoice</button></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saved Toys Section -->
+      <div id="saved" class="dashboard-section">
+        <div class="data-card">
+          <h3>Saved Toys</h3>
+          <div class="product-grid" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); mt-4">
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-img"><img src="assets/magic_toy_set.webp" alt="Magic Toy Set"></div>
+              <div class="product-info" style="padding: 15px;">
+                <h3 style="font-size: 1.1rem;">Magic Toy Set</h3>
+                <div class="price" style="font-size: 1.1rem;">$49.00</div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <a href="404.html" class="btn btn-secondary">Add to Cart</a>
+                  <button onclick="window.location.href='404.html'" style="border: none; background: #fff5f6; color: var(--accent); padding: 8px 15px; border-radius: 50px; cursor: pointer;">&#10060;</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-img"><img src="assets/creative_arts.webp" alt="Creative Arts Set"></div>
+              <div class="product-info" style="padding: 15px;">
+                <h3 style="font-size: 1.1rem;">Creative Arts Set</h3>
+                <div class="price" style="font-size: 1.1rem;">$55.00</div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <a href="404.html" class="btn btn-secondary">Add to Cart</a>
+                  <button onclick="window.location.href='404.html'" style="border: none; background: #fff5f6; color: var(--accent); padding: 8px 15px; border-radius: 50px; cursor: pointer;">&#10060;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Addresses Section -->
+      <div id="addresses" class="dashboard-section">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <h3>My Addresses</h3>
+          <button onclick="window.location.href='404.html'" class="btn">+ Add New Address</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+          <div class="data-card" style="margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+              <h4 style="margin: 0;">Home Address <span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; margin-left: 10px;">Default</span></h4>
+              <a href="404.html" style="color: var(--primary); font-size: 0.9rem;">Edit</a>
+            </div>
+            <p style="margin: 5px 0; color: var(--text-dark);"><strong>John Doe</strong></p>
+            <p style="margin: 5px 0;">123 Magical Lane, Suite 4B</p>
+            <p style="margin: 5px 0;">Toyville, CA 90210</p>
+            <p style="margin: 5px 0;">Phone: (555) 123-4567</p>
+          </div>
+          <div class="data-card" style="margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+              <h4 style="margin: 0;">Office Address</h4>
+              <a href="404.html" style="color: var(--primary); font-size: 0.9rem;">Edit</a>
+            </div>
+            <p style="margin: 5px 0; color: var(--text-dark);"><strong>John Doe</strong></p>
+            <p style="margin: 5px 0;">456 Business Park Dr.</p>
+            <p style="margin: 5px 0;">Stackly Headquarters</p>
+            <p style="margin: 5px 0;">Toyville, CA 90212</p>
+            <p style="margin: 5px 0;">Phone: (555) 987-6543</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Settings Section -->
+      <div id="settings" class="dashboard-section">
+        <div class="data-card">
+          <h3>Account Settings</h3>
+          <form action="404.html" class="settings-form" style="max-width: 600px; margin-top: 20px;">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Full Name</label>
+              <input type="text" value="John Doe" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Email Address</label>
+              <input type="email" value="john@example.com" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">New Password (leave blank to keep current)</label>
+              <input type="password" placeholder="••••••••" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: flex; align-items: center; cursor: pointer; color: var(--text-dark);">
+                <input type="checkbox" checked style="margin-right: 10px; width: 18px; height: 18px;">
+                Subscribe to our newsletter for magical offers!
+              </label>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; border-radius: 8px;">Save Changes</button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({duration: 800, once: true, offset: 50});</script>
+</body>
+</html>
+

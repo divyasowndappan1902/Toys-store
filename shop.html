@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Stackly</title>
+  <meta name="description" content="Browse our complete collection of premium, educational, and fun toys.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo"><img src="assets/stackly_logo.webp" alt="Stackly" style="height: 35px; vertical-align: middle;"></a>
+      <div class="mobile-toggle" id="mobile-toggle">&#9776;</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="btn mobile-login-btn">Login</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn" onclick="window.location.href='login.html'">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 14. Call to Action (Hero) -->
+  <section class="hero" style="padding: 80px 0; text-align: center;">
+    <div class="container" style="flex-direction: column;">
+      <h1 style="font-size: 3.5rem; color: var(--text-dark); margin-bottom: 20px;">Find the <span style="color: var(--primary);">Perfect Toy</span> for Every Child</h1>
+      <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: var(--text-light);">Explore our colorful collection of fun, educational, and high-quality toys designed to inspire creativity, learning, and endless play.</p>
+      <div style="display: flex; gap: 15px; justify-content: center;">
+        <a href="404.html" class="btn">Shop Now</a>
+        <a href="404.html" class="btn btn-secondary">View Collections</a>
+        <a href="404.html" class="btn">Explore Deals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Product Filters -->
+  <section class="container" id="products">
+    <div class="shop-filters" data-aos="fade-right">
+      <div class="filter-group">
+        <label>Category:</label>
+        <select><option>All Categories</option><option>Action Figures</option><option>Educational</option><option>Puzzles</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Brand:</label>
+        <select><option>All Brands</option><option>LEGO</option><option>Barbie</option><option>Fisher-Price</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Age:</label>
+        <select><option>Any Age</option><option>0-2 Years</option><option>3-5 Years</option><option>6-8 Years</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Sort By:</label>
+        <select><option>Customer Rating</option><option>Price: Low to High</option><option>Price: High to Low</option><option>Newest</option></select>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Featured Categories -->
+  <section class="section-padding section-bg-white" id="categories">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down" style="margin-bottom: 40px;">
+        <h2>Featured Categories</h2>
+      </div>
+      <div class="compact-category-grid">
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-robot"></i></span><span>Action Figures</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-house-chimney"></i></span><span>Dolls & Houses</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-car-side"></i></span><span>RC Toys</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-cubes"></i></span><span>Building Blocks</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-graduation-cap"></i></span><span>Educational</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-paw"></i></span><span>Soft Toys</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-baby-carriage"></i></span><span>Baby Toys</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-dice"></i></span><span>Board Games</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-puzzle-piece"></i></span><span>Puzzles</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-basketball"></i></span><span>Outdoor Toys</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-palette"></i></span><span>Arts & Crafts</span></div>
+        <div class="compact-category-card" data-aos="fade-up"><span class="icon"><i class="fa-solid fa-truck-fast"></i></span><span>Toy Vehicles</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Special Offers -->
+  <section class="container" id="offers">
+    <div class="promo-banner">
+      <h2>Weekend Deals: Up to 50% Off!</h2>
+      <p>Bundle offers and holiday discounts are live. Buy 2 Get 1 Free on all Educational Toys.</p>
+      <button onclick="window.location.href='404.html'" class="btn">Shop Offers</button>
+    </div>
+  </section>
+
+  <!-- 2. Best Selling Toys & 8. Product Cards -->
+  <section class="products section-padding section-bg-white">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down">
+        <h2>Best Selling Toys</h2>
+      </div>
+      <div class="product-grid">
+        <!-- Card 1 -->
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn" title="Add to Wishlist">&#10084;</div>
+            <div class="action-btn" title="Quick View">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/home_dollhouse.webp" alt="Wooden Dollhouse"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Premium Dollhouse</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (128)</div>
+            <p class="product-desc">A beautiful, multi-level wooden dollhouse with intricate furniture details.</p>
+            <div class="price-container">
+              <span class="original-price">$150.00</span>
+              <span class="discount-price">$120.00</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <!-- Card 2 -->
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn" title="Add to Wishlist">&#10084;</div>
+            <div class="action-btn" title="Quick View">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/shop_action_figure.webp" alt="Action Figure"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Galaxy Defender</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734; (85)</div>
+            <p class="product-desc">Highly articulated futuristic action figure with light-up features.</p>
+            <div class="price-container">
+              <span class="original-price">$35.00</span>
+              <span class="discount-price">$25.99</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <!-- Card 3 -->
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn" title="Add to Wishlist">&#10084;</div>
+            <div class="action-btn" title="Quick View">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/home_rc_car.webp" alt="RC Car"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Velocity RC Drift Car</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (210)</div>
+            <p class="product-desc">High-speed remote control car built for extreme racing and drifting.</p>
+            <div class="price-container">
+              <span class="discount-price">$89.99</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <!-- Card 4 -->
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn" title="Add to Wishlist">&#10084;</div>
+            <div class="action-btn" title="Quick View">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/magic_toy_set.webp" alt="Magic Kit"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Ultimate Magic Set</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (94)</div>
+            <p class="product-desc">Over 50 mind-blowing illusions for the aspiring young magician.</p>
+            <div class="price-container">
+              <span class="original-price">$60.00</span>
+              <span class="discount-price">$49.00</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Shop by Age -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down">
+        <h2>Shop by Age</h2>
+      </div>
+      <div class="category-grid" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="category-card" data-aos="fade-up" style="padding: 20px;">
+          <span class="category-icon" style="font-size: 2.5rem;"><i class="fa-solid fa-baby"></i></span>
+          <h3>0-2 Years</h3>
+        </div>
+        <div class="category-card" data-aos="fade-up" style="padding: 20px;">
+          <span class="category-icon" style="font-size: 2.5rem;"><i class="fa-solid fa-child"></i></span>
+          <h3>3-5 Years</h3>
+        </div>
+        <div class="category-card" data-aos="fade-up" style="padding: 20px;">
+          <span class="category-icon" style="font-size: 2.5rem;"><i class="fa-solid fa-child-dress"></i></span>
+          <h3>6-8 Years</h3>
+        </div>
+        <div class="category-card" data-aos="fade-up" style="padding: 20px;">
+          <span class="category-icon" style="font-size: 2.5rem;"><i class="fa-solid fa-child-reaching"></i></span>
+          <h3>9-12 Years</h3>
+        </div>
+        <div class="category-card" data-aos="fade-up" style="padding: 20px;">
+          <span class="category-icon" style="font-size: 2.5rem;"><i class="fa-solid fa-gamepad"></i></span>
+          <h3>13+ Years</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 3. New Arrivals -->
+  <section class="products section-padding">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down">
+        <h2>New Arrivals</h2>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn">&#10084;</div>
+            <div class="action-btn">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/home_blocks.webp" alt="Mega Blocks"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Mega Constructor Set</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734; (22)</div>
+            <p class="product-desc">Let imagination run wild with 500+ colorful building pieces.</p>
+            <div class="price-container">
+              <span class="discount-price">$45.00</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn">&#10084;</div>
+            <div class="action-btn">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/shop_water_toy.webp" alt="Water Blaster"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Neon Water Blaster</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (67)</div>
+            <p class="product-desc">Get ready for summer with this extreme range water blaster.</p>
+            <div class="price-container">
+              <span class="discount-price">$15.99</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn">&#10084;</div>
+            <div class="action-btn">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/shop_baby_toy.webp" alt="Teether"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Pastel Sensory Teether</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (115)</div>
+            <p class="product-desc">Safe, BPA-free teething rings perfect for soothing gums.</p>
+            <div class="price-container">
+              <span class="discount-price">$22.00</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Customer Favorites -->
+  <section class="products section-padding section-bg-white">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down">
+        <h2>Customer Favorites & Staff Picks</h2>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn">&#10084;</div>
+            <div class="action-btn">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/shop_puzzle.webp" alt="Puzzle"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Wooden Brain Teaser</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (340)</div>
+            <p class="product-desc">Challenge the mind with this intricate 3D wooden puzzle.</p>
+            <div class="price-container">
+              <span class="original-price">$25.00</span>
+              <span class="discount-price">$19.99</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn">&#10084;</div>
+            <div class="action-btn">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/shop_board_game.webp" alt="Board Game"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Family Quest Board Game</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (512)</div>
+            <p class="product-desc">An award-winning cooperative game for the whole family.</p>
+            <div class="price-container">
+              <span class="discount-price">$34.50</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-actions-overlay">
+            <div class="action-btn">&#10084;</div>
+            <div class="action-btn">&#128065;</div>
+          </div>
+          <div class="product-img"><img src="assets/creative_arts.webp" alt="Arts Set"></div>
+          <div class="product-info" style="padding-bottom: 0;">
+            <h3>Deluxe Art Studio</h3>
+            <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734; (180)</div>
+            <p class="product-desc">Paints, markers, and colored pencils in a premium wooden case.</p>
+            <div class="price-container">
+              <span class="discount-price">$55.00</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="width: 100%; border-radius: 0;">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Why Shop With Us? -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down">
+        <h2>Why Shop With Us?</h2>
+      </div>
+      <div class="feature-row" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="feature-item" data-aos="fade-up"><div class="feature-icon">&#11088;</div><div><h4>High-Quality Toys</h4><p>Curated premium selection</p></div></div>
+        <div class="feature-item" data-aos="fade-up"><div class="feature-icon"><i class="fa-solid fa-box-open"></i></div><div><h4>Safe & Child-Friendly</h4><p>Non-toxic & certified</p></div></div>
+        <div class="feature-item" data-aos="fade-up"><div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div><div><h4>Fast Shipping</h4><p>Next-day delivery available</p></div></div>
+        <div class="feature-item" data-aos="fade-up"><div class="feature-icon">&#128274;</div><div><h4>Secure Payment</h4><p>100% encrypted checkout</p></div></div>
+        <div class="feature-item" data-aos="fade-up"><div class="feature-icon">&#128260;</div><div><h4>Easy Returns</h4><p>Hassle-free 30-day policy</p></div></div>
+        <div class="feature-item" data-aos="fade-up"><div class="feature-icon"><i class="fa-solid fa-child-reaching"></i></div><div><h4>24/7 Support</h4><p>We're here when you need us</p></div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 13. FAQ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title" data-aos="fade-down">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What is the delivery time?</div>
+          <div class="faq-answer">Standard shipping takes 3-5 business days. Express next-day shipping is available at checkout.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is your return policy?</div>
+          <div class="faq-answer">We offer an easy, hassle-free 30-day return policy. If you or your child aren't completely satisfied, simply send it back for a full refund.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Are the toys safety certified?</div>
+          <div class="faq-answer">Absolutely. All toys undergo rigorous safety testing and are certified to meet international safety standards (BPA-free, non-toxic paints).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you offer gift wrapping?</div>
+          <div class="faq-answer">Yes! You can add premium gift wrapping and a personalized note to any order at checkout for a small fee.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How can I track my order?</div>
+          <div class="faq-answer">Once your order ships, you will receive an email with a tracking link. You can also track your order directly from your Stackly account dashboard.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Newsletter Section -->
+  <section class="container">
+    <div class="newsletter-section" style="margin-bottom: 60px;">
+      <h2>Stay Updated with New Toys</h2>
+      <p>Subscribe to receive updates on new arrivals, exclusive offers, and exciting toy collections.</p>
+      <form action="404.html" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="dark-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand & Socials -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="logo" style="display:inline-block; margin-bottom: 15px;"><img src="assets/stackly_logo.webp" alt="Stackly" style="height: 30px; vertical-align: middle;"></a>
+          <p>Premium toys, unbeatable prices, and next-gen fun delivered right to your door.</p>
+          <div class="social-links-footer">
+            <a href="404.html" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="404.html" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+            <a href="404.html" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.086 0 12 0 12s0 3.914.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.914 24 12 24 12s0-3.914-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Categories -->
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="404.html">Action Figures</a></li>
+            <li><a href="404.html">Plush Toys</a></li>
+            <li><a href="404.html">Educational Sets</a></li>
+            <li><a href="404.html">Board Games</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col contact-col">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span> Stackly Phase1, Salem, Tamil Nadu</li>
+            <li><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> +91 9876543210</li>
+            <li><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span> support@thestackly.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom dark-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved.</p>
+        <div class="payment-methods">
+          <span>VISA</span>
+          <span>MASTERCARD</span>
+          <span>PAYPAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({duration: 800, once: true, offset: 50});</script>
+</body>
+</html>
+

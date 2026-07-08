@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Stackly</title>
+  <meta name="description" content="Stackly Admin Dashboard">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dash-sidebar">
+      <div class="dashboard-logo">
+        <a href="index.html" class="logo"><img src="assets/stackly_logo.webp" alt="Stackly" style="height: 35px; vertical-align: middle;"></a>
+      </div>
+      <nav class="dashboard-nav">
+        <a href="javascript:void(0)" data-target="overview" class="active">&#128200; Dashboard Overview</a>
+        <a href="javascript:void(0)" data-target="orders">&#128230; Manage Orders</a>
+        <a href="javascript:void(0)" data-target="inventory">&#128059; Product Inventory</a>
+        <a href="javascript:void(0)" data-target="customers">&#128101; Customers</a>
+        <a href="javascript:void(0)" data-target="settings">&#9881; Settings</a>
+        <a href="login.html" class="logout">&#128682; Logout</a>
+        
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <div style="display: flex; align-items: center;">
+          <div class="mobile-menu-btn" id="dash-menu-btn">&#9776;</div>
+          <h2>Welcome Back, Admin!</h2>
+        </div>
+        <div class="user-profile-sm">
+          <div style="text-align: right;">
+            <div style="font-weight: 700; color: var(--text-dark);">System Admin</div>
+            <div id="display-email" style="font-size: 0.85rem;">admin@toyup.com</div>
+          </div>
+          <div class="user-avatar">A</div>
+        </div>
+      </header>
+
+      <!-- Overview Section -->
+      <div id="overview" class="dashboard-section active">
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon">&#128176;</div>
+            <div class="kpi-info">
+              <h4>Total Revenue</h4>
+              <div class="kpi-value">$24,500</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon orange">&#128230;</div>
+            <div class="kpi-info">
+              <h4>Active Orders</h4>
+              <div class="kpi-value">128</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon red">&#128059;</div>
+            <div class="kpi-info">
+              <h4>Total Products</h4>
+              <div class="kpi-value">450</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">&#128101;</div>
+            <div class="kpi-info">
+              <h4>New Customers</h4>
+              <div class="kpi-value">34</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div style="margin-bottom: 40px; display: flex; gap: 15px;">
+          <button onclick="window.location.href='404.html'" class="btn">+ Add New Product</button>
+          <button onclick="window.location.href='404.html'" class="btn btn-secondary">Download Report</button>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div class="data-card">
+          <h3>Recent Orders <a href="404.html" style="font-size: 1rem; color: var(--primary);">View All &rarr;</a></h3>
+          <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#ORD-8942</td>
+                <td>Sarah Jenkins</td>
+                <td>Jul 07, 2026</td>
+                <td>$124.50</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td><a href="404.html" style="color: var(--primary); font-weight: 600;">Details</a></td>
+              </tr>
+              <tr>
+                <td>#ORD-8941</td>
+                <td>David O'Connor</td>
+                <td>Jul 06, 2026</td>
+                <td>$49.99</td>
+                <td><span class="status-badge status-completed">Completed</span></td>
+                <td><a href="404.html" style="color: var(--primary); font-weight: 600;">Details</a></td>
+              </tr>
+              <tr>
+                <td>#ORD-8940</td>
+                <td>Emily Chen</td>
+                <td>Jul 06, 2026</td>
+                <td>$89.00</td>
+                <td><span class="status-badge status-completed">Completed</span></td>
+                <td><a href="404.html" style="color: var(--primary); font-weight: 600;">Details</a></td>
+              </tr>
+              <tr>
+                <td>#ORD-8939</td>
+                <td>Michael Brown</td>
+                <td>Jul 05, 2026</td>
+                <td>$34.50</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td><a href="404.html" style="color: var(--primary); font-weight: 600;">Details</a></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manage Orders Section -->
+      <div id="orders" class="dashboard-section">
+        <div class="data-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3 style="margin: 0;">Manage Orders</h3>
+            <input type="text" placeholder="Search orders..." style="padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+          </div>
+          <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#ORD-8942</td>
+                <td>Sarah Jenkins</td>
+                <td>Jul 07, 2026</td>
+                <td>$124.50</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td>
+                  <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; margin-right: 5px;">Approve</button>
+                  <button onclick="window.location.href='404.html'" style="border: 1px solid var(--accent); background: transparent; color: var(--accent); padding: 6px 12px; border-radius: 50px; cursor: pointer; font-size: 0.8rem;">Cancel</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#ORD-8939</td>
+                <td>Michael Brown</td>
+                <td>Jul 05, 2026</td>
+                <td>$34.50</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td>
+                  <button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; margin-right: 5px;">Approve</button>
+                  <button onclick="window.location.href='404.html'" style="border: 1px solid var(--accent); background: transparent; color: var(--accent); padding: 6px 12px; border-radius: 50px; cursor: pointer; font-size: 0.8rem;">Cancel</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Inventory Section -->
+      <div id="inventory" class="dashboard-section">
+        <div class="data-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3 style="margin: 0;">Product Inventory</h3>
+            <button onclick="window.location.href='404.html'" class="btn">+ Add Product</button>
+          </div>
+          <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="assets/plush_bear_1783418828034.png" alt="Bear" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                <td>Premium Plush Bear</td>
+                <td>Plush Toys</td>
+                <td>$29.99</td>
+                <td>145 <span style="color: green; font-size: 0.8rem;">(In Stock)</span></td>
+                <td><a href="404.html" style="color: var(--primary);">Edit</a> | <a href="404.html" style="color: var(--accent);">Delete</a></td>
+              </tr>
+              <tr>
+                <td><img src="assets/toy_car_1783418838575.png" alt="Car" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                <td>Red Racing Car</td>
+                <td>Action Figures</td>
+                <td>$34.50</td>
+                <td>12 <span style="color: orange; font-size: 0.8rem;">(Low Stock)</span></td>
+                <td><a href="404.html" style="color: var(--primary);">Edit</a> | <a href="404.html" style="color: var(--accent);">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customers Section -->
+      <div id="customers" class="dashboard-section">
+        <div class="data-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3 style="margin: 0;">Customer Management</h3>
+            <input type="text" placeholder="Search customers..." style="padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+          </div>
+          <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Email</th>
+                <th>Total Orders</th>
+                <th>Total Spent</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sarah Jenkins</td>
+                <td>sarah@example.com</td>
+                <td>12</td>
+                <td>$450.00</td>
+                <td><button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">View Profile</button></td>
+              </tr>
+              <tr>
+                <td>David O'Connor</td>
+                <td>david@example.com</td>
+                <td>5</td>
+                <td>$210.50</td>
+                <td><button onclick="window.location.href='404.html'" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">View Profile</button></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div id="settings" class="dashboard-section">
+        <div class="data-card">
+          <h3>System Settings</h3>
+          <form action="404.html" class="settings-form" style="max-width: 600px; margin-top: 20px;">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Store Name</label>
+              <input type="text" value="Stackly Premium Toys" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Admin Email</label>
+              <input type="email" value="admin@toyup.com" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: flex; align-items: center; cursor: pointer; color: var(--text-dark);">
+                <input type="checkbox" checked style="margin-right: 10px; width: 18px; height: 18px;">
+                Enable Maintenance Mode
+              </label>
+            </div>
+            <button type="submit" class="btn" style="border-radius: 8px;">Save Settings</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({duration: 800, once: true, offset: 50});</script>
+</body>
+</html>
+
